@@ -1,0 +1,60 @@
+ body{margin:0px; font-family:Arial, Sans-Serif; font-size:13px;}
+        /* dock */
+        #dock{margin:0px; padding:0px; list-style:none; position:fixed; top:0px; height:100%; 
+              z-index:100; background-color:#f0f0f0; left:0px;}
+        #dock > li {width:40px; height:120px; margin: 0 0 1px 0; background-color:#dcdcdc;
+                     background-repeat:no-repeat; background-position:left center;}
+        
+        #dock #addresses {background-image:url(addresses.png);}
+        #dock #tours {background-image:url(tours.png);}
+        #dock > li:hover {background-position:-40px 0px;}
+        
+        /* panels */
+        #dock ul li {padding:5px; border: solid 1px #F1F1F1;}
+        #dock ul li:hover {background:#D3DAED url(item_bkg.png) repeat-x; border: solid 1px #A8D8EB;}
+        #dock ul li.header, #dock ul li .header:hover {background:#D3DAED url(header_bkg.png) repeat-x;border: solid 1px #F1F1F1;}
+      
+        #dock > li:hover ul {display:block;}
+        #dock > li ul {position:absolute; top:0px; left:-180px;  z-index:-1;width:180px; display:none;
+                       background-color:#F1F1F1; border:solid 1px #969696; padding:0px; margin:0px; list-style:none;}
+        #dock > li ul.docked { display:block;z-index:-2;}
+        
+        .dock,.undock{float:right;}
+       .undock {display:none;}
+        #content {margin: 10px 0 0 60px;}
+		.previewImg{ height: 100px; width: 100px;}
+		.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-bottom: 10px;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+ .hidden {
+    display:none;
+}

@@ -1,0 +1,139 @@
+{"data":[{
+        "id":"marker888",
+		"address": "888 Biscayne Boulevard - Downtown Miami",
+		"latitude": "25.782729",
+		"longitude": "-80.190097",
+		 "img":"888Miami"
+	},
+
+	{
+	    "id":"marker1282",
+		"address": "1282 3rd Ave- Upper East Side New York",
+		"latitude": "40.771188",
+		"longitude": "-73.960057",
+		"img":"1282NewYork"
+	},
+
+	{
+	    "id":"marker744",
+		"address": "744 North Damen Avenue - Wicker Park Chicago",
+		"latitude": "41.895720",
+		"longitude": "-87.677269",
+		"img":"744Chicago"
+	},
+
+	{
+	    "id":"marker380",
+		"address": "380 Canal Street - SoHo New York",
+		"latitude": "40.721626",
+		"longitude": "-74.004697",
+		"img":"380NewYork"
+	},
+
+	{
+		"id":"marker1",
+		"address": "Time Warner Center - Columbus Circle New York",
+		"latitude": "40.768707",
+		"longitude": "-73.983103",
+		"img":"1NewYork"
+	},
+
+	{
+		"id":"marker261",
+		"address": "261-267 Canal Street - SoHo New York",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"261NewYork"
+	},
+	{
+		"id":"marker119",
+		"address": "119 North Fairfax Avenue - Television City Los Angeles",
+		"latitude": "34.046693",
+		"longitude": "-118.455762",
+		"img":"119LosAngeles"
+	},
+	{
+		"id":"marker2",
+		"address": "Hilton - Downtown Chicago",
+		"latitude": "41.874161, -87.624150",
+		"longitude": " -118.453145",
+		"img":"2Chicago"
+	},
+	{
+		"id":"marker130",
+		"address": "130 W 2nd St, Los Angeles, California 90012-3706",
+		"latitude": "34.051676",
+		"longitude": " -118.245408",
+		"img":"130LosAngeles"
+	},
+	{
+		"id":"marker200",
+		"address": "200 East 9th Street - Fashion District Los Angeles",
+		"latitude": "34.051676",
+		"longitude": "-110.245408",
+		"img":"200California"
+	},
+	{
+		"id":"marker168",
+		"address": "168 Bowery - SoHo New York",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"168NewYork"
+	},
+	{
+		"id":"marker41",
+		"address": "41 East Houston Street - Soho New York",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"41NewYork"
+	},
+	{
+		"id":"marker2800",
+		"address": "2800 West North Avenue - Humboldt Park Chicago",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"2800Chicago"
+	},
+	{
+		"id":"marker103",
+		"address": "103 West 4th Street - Downtown Los Angeles",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"103LosAngeles"
+	},
+	{
+		"id":"marker2461",
+		"address": "2461 North Lincoln Avenue - Lincoln Park",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"2461LincolnPark"
+	},
+	{
+		"id":"marker1335",
+		"address": "1335 6th Avenue - Midtown New York",
+		"latitude": "40.762448",
+		"longitude": "-73.979205",
+		"img":"1335NewYork"
+	},
+	{
+		"id":"marker261",
+		"address": "261-267 Canal Street - SoHo New York",
+		"latitude": "40.719287",
+		"longitude": " -74.001021",
+		"img":"261NewYork"
+	},
+	{
+		"id":"marker900",
+		"address": "900 South Wabash Avenue - The Loop Chicago",
+		"latitude": "41.870595",
+		"longitude": "-87.626375",
+		"img":"900Chicago"
+	},
+	{
+		"id":"marker103",
+		"address": "103 West 4th Street - Downtown Los Angeles",
+		"latitude": "34.048779",
+		"longitude": "-118.247280",
+		"img":"103LosAngeles"
+	}
+]}
