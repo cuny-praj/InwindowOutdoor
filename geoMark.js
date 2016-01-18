@@ -41,7 +41,7 @@ function initialize(markers) {
         var $li = $('<li> </li>');
         $li.attr("id", markers[i].id);
         $li.append('<a class="marker-link" data-markerid="' + i + '" href="#">' + locations[i][1] + '</a> ');
-        $("#addresses ul").append($li);
+        $("#list").append($li);
         var marker = new google.maps.Marker({
             position: locations[i][0],
             map: map,
@@ -51,9 +51,66 @@ function initialize(markers) {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 var imagePath = 'Intern_Test/images/' + markers[i].img + '.jpg';
-                var contentString = "<p><img width='80' src='" + imagePath + "'/>" + locations[i][1] + "</p>";
+                // var contentString = "<p><img width='80' src='" + imagePath + "'/>" + locations[i][1] + "</p>";
+                var contentString = "<div style='display: inline-block;padding:10px;'> <div style='float:left;border:1px solid;'> <img width='100' src='" + imagePath + "'/> </div> <div style='margin-top:20px;margin-left:20px'> " + locations[i][1] + " </div> </div>";
                 infowindow.setContent(contentString);
                 infowindow.open(map, marker);
+                google.maps.event.addListener(infowindow, 'domready', function() {
+
+                    // Reference to the DIV which receives the contents of the infowindow using jQuery
+                    var iwOuter = $('.gm-style-iw');
+
+                    /* The DIV we want to change is above the .gm-style-iw DIV.
+                     * So, we use jQuery and create a iwBackground variable,
+                     * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
+                     */
+                    var iwBackground = iwOuter.prev();
+
+                    // Remove the background shadow DIV
+                    iwBackground.children(':nth-child(2)').css({
+                        'display': 'none'
+                    });
+
+                    // Remove the white background DIV
+                    iwBackground.children(':nth-child(4)').css({
+                        'display': 'none'
+                    });
+                    iwOuter.parent().parent().css({
+                        left: '115px'
+                    });
+                    iwBackground.children(':nth-child(1)').attr('style', function(i, s) {
+                        return s + 'left: 76px !important;'
+                    });
+
+                    // Moves the arrow 76px to the left margin 
+                    iwBackground.children(':nth-child(3)').attr('style', function(i, s) {
+                        return s + 'left: 76px !important;'
+                    });
+                    iwBackground.children(':nth-child(3)').find('div').children().css({
+                        'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px',
+                        'z-index': '1'
+                    });
+                    var iwCloseBtn = iwOuter.next();
+
+                    // Apply the desired effect to the close button
+                    iwCloseBtn.css({
+                        opacity: '1', // by default the close button has an opacity of 0.7
+                        right: '30px',
+                        top: '8px', // button repositioning
+                        border: '3px solid #000066', // increasing button border and new color
+                        'border-radius': '13px', // circular effect
+                        'box-shadow': '0 0 5px #3990B9' // 3D effect to highlight the button
+                    });
+
+                    // The API automatically applies 0.7 opacity to the button after the mouseout event.
+                    // This function reverses this event to the desired value.
+                    iwCloseBtn.mouseout(function() {
+                        $(this).css({
+                            opacity: '1'
+                        });
+                    });
+                });
+
             }
         })(marker, i));
         latlngbounds.extend(marker.position);
@@ -83,9 +140,9 @@ $(document).ready(function() {
         $(this).parent().find(".undock").show();
         $(this).hide();
         if (docked > 0)
-            $("#dvMap").css("margin-left", "250px");
+            $("#dvMap").css("margin-left", "220px");
         else
-            $("#dvMap").css("margin-left", "60px");
+            $("#dvMap").css("margin-left", "40px");
     });
     $("#dock .undock").click(function() {
         $(this).parent().parent().addClass("free").removeClass("docked")
@@ -102,9 +159,9 @@ $(document).ready(function() {
         $(this).parent().find(".dock").show();
         $(this).hide();
         if (docked > 0)
-            $("#dvMap").css("margin-left", "250px");
+            $("#dvMap").css("margin-left", "220px");
         else
-            $("#dvMap").css("margin-left", "60px");
+            $("#dvMap").css("margin-left", "40px");
     });
     $("#dock li").hover(function() {
         $(this).find("ul").animate({
@@ -212,7 +269,7 @@ function getBase64Image(img) {
 }
 
 function addLocation() {
-    var locationName = document.getElementById('location').value;
+    locationName = document.getElementById('location').value;
     var picture = localStorage.getItem('image');
     points[points.length] = [locationName, picture, pinPoint];
     document.getElementById('location').value = "";

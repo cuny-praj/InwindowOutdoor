@@ -12,18 +12,20 @@
       <script type="text/javascript" src="geoMark.js"></script>
    </head>
    <body>
-      <ul id="dock">
+   <div id="menu" style="float:left;">
+      <ul id="dock">	  
          <li id="addresses">
-            <ul id="check" class="free" style="width:300px">
+            <ul id="check">
                <li id="header" class="header"><a href="#" class="dock">Dock</a><a href="#" class="undock">Undock</a>Addresses</li>
                <li id="searchBox">  <input type="text" name="search" id="search" placeholder="type address to search for" style="width: 100%;"> </li>
                <li id="searchResult">
                   <div id="update" style="padding:10px; border-style: solid;"> </div>
                </li>
             </ul>
+			<ul id="list" style="top:100px;"> </ul>
          </li>
          <li id="tours">
-            <ul class="free">
+            <ul>
                <li class="header"><a href="#" class="dock">Dock</a><a href="#" class="undock">Undock</a>Tools</li>
                <li>
                   <div id="startDiv" style="padding:10px 0px;">
@@ -48,6 +50,7 @@
             </ul>
          </li>
       </ul>
-      <div id="dvMap" style="width: 100%; height: 100%"></div>
+	  </div>
+      <div id="dvMap" style="height: 100%;margin-left:40px"></div>
    </body>
 </html>
